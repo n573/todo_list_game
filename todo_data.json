@@ -1,0 +1,167 @@
+{
+  "xp": 710,
+  "tasks": [],
+  "history": [
+    {
+      "id": "1d179a9774134c07b94d9a7339eda5a8",
+      "text": "5",
+      "weight": 5,
+      "completed": true,
+      "completed_at": "now"
+    },
+    {
+      "id": "24b0b40e0eb1412f83e3e68e52111990",
+      "text": "5",
+      "weight": 5,
+      "completed": true,
+      "completed_at": "now"
+    },
+    {
+      "id": "6cd2259e8d04403e8cdb52d54468a6ce",
+      "text": "1",
+      "weight": 5,
+      "completed": true,
+      "completed_at": "now"
+    },
+    {
+      "id": "fbfb2d06b2a449eba88515c540981db2",
+      "text": "1",
+      "weight": 5,
+      "completed": true,
+      "completed_at": "now"
+    },
+    {
+      "id": "84102cc1b3a140b4b69d6b79ed8b3e73",
+      "text": "20",
+      "weight": 2,
+      "completed": true,
+      "completed_at": "now"
+    },
+    {
+      "id": "6bc14857f03c4f49bf89840f3a889286",
+      "text": "20",
+      "weight": 2,
+      "completed": true,
+      "completed_at": "now"
+    },
+    {
+      "id": "e09c8e08ad9f4291bca674c94dc9cfff",
+      "text": "20",
+      "weight": 2,
+      "completed": true,
+      "completed_at": "now"
+    },
+    {
+      "id": "4ccbc072c6ca4381800bb08ba986464b",
+      "text": "20",
+      "weight": 2,
+      "completed": true,
+      "completed_at": "now"
+    },
+    {
+      "id": "c90df7ac75894615b290a2953aefccc8",
+      "text": "20",
+      "weight": 2,
+      "completed": true,
+      "completed_at": "now"
+    },
+    {
+      "id": "0692c7942f1a4396840c8df7e979a0aa",
+      "text": "20",
+      "weight": 2,
+      "completed": true,
+      "completed_at": "now"
+    },
+    {
+      "id": "a45e12b144244c398201bb93a8dab851",
+      "text": "20",
+      "weight": 2,
+      "completed": true,
+      "completed_at": "now"
+    },
+    {
+      "id": "50f8400577a447bbb6c0d8f982599d16",
+      "text": "20",
+      "weight": 2,
+      "completed": true,
+      "completed_at": "now"
+    },
+    {
+      "id": "11ce1c54fcd24f4aaca61c5f5ec40199",
+      "text": "20",
+      "weight": 2,
+      "completed": true,
+      "completed_at": "now"
+    },
+    {
+      "id": "08fec075305a425a866c23fc302f871e",
+      "text": "test",
+      "weight": 2,
+      "completed": true,
+      "completed_at": "now"
+    },
+    {
+      "id": "7dab1966bad544878b8a7895df047823",
+      "text": "50",
+      "weight": 5,
+      "completed": true,
+      "completed_at": "now"
+    },
+    {
+      "id": "85d1b0ba6827476a9b54ff7bf734d137",
+      "text": "50",
+      "weight": 5,
+      "completed": true,
+      "completed_at": "now"
+    },
+    {
+      "id": "f87da6b3eaed422c812dc8ea6cfc1d72",
+      "text": "test 3",
+      "weight": 3,
+      "completed": true,
+      "completed_at": "now"
+    },
+    {
+      "id": "d36a5e83151b4e35bdc1ee558a3b9e28",
+      "text": "test 2",
+      "weight": 2,
+      "completed": true,
+      "completed_at": "now"
+    },
+    {
+      "id": "45018e46bcf1468ab31cd655360faff0",
+      "text": "test 1",
+      "weight": 5,
+      "completed": true,
+      "completed_at": "now"
+    },
+    {
+      "id": "04dec396c4c845dfb18accbed4fd80c8",
+      "text": "test",
+      "weight": 2,
+      "completed": true,
+      "completed_at": "now"
+    },
+    {
+      "id": "c04597a8921b4aa792d23f8a11287638",
+      "text": "go to sleep before 12:30am",
+      "weight": 4,
+      "completed": true,
+      "completed_at": "now"
+    },
+    {
+      "id": "13a98a41d01943a192aeecbce4453828",
+      "text": "do at least 1/2 the dishes",
+      "weight": 2,
+      "completed": true,
+      "completed_at": "now"
+    },
+    {
+      "id": "61b7299fde484091a4faf2932adcaffc",
+      "text": "take out trash",
+      "weight": 3,
+      "completed": true,
+      "completed_at": "now"
+    }
+  ]
+}
