@@ -58,8 +58,8 @@ class TaskAdapter(
         private var suppressCallbacks = false
 
         init {
-            val adapter = ArrayAdapter(itemView.context, android.R.layout.simple_spinner_item, weightOptions)
-            adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+            val adapter = ArrayAdapter(itemView.context, R.layout.spinner_item, weightOptions)
+            adapter.setDropDownViewResource(R.layout.spinner_dropdown_item)
             weightSpinner.adapter = adapter
 
             weightSpinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {

@@ -16,18 +16,13 @@
         android:textColor="@color/text"
         android:textColorHint="@color/muted" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="6dp"
-        android:text="W:"
-        android:textColor="@color/text" />
-
     <Spinner
         android:id="@+id/task_weight_spinner"
         android:layout_width="56dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="2dp" />
+        android:layout_marginStart="6dp"
+        android:background="@color/panel"
+        android:popupBackground="@color/panel" />
 
     <Button
         android:id="@+id/task_done"

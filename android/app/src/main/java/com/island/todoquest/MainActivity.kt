@@ -53,8 +53,8 @@ class MainActivity : AppCompatActivity() {
         levelUpOverlay = findViewById(R.id.level_up_overlay)
 
         val weightOptions = listOf("1", "2", "3", "4", "5")
-        val spinnerAdapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, weightOptions)
-        spinnerAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+        val spinnerAdapter = ArrayAdapter(this, R.layout.spinner_item, weightOptions)
+        spinnerAdapter.setDropDownViewResource(R.layout.spinner_dropdown_item)
         newWeightSpinner.adapter = spinnerAdapter
         newWeightSpinner.setSelection(1)
 
@@ -121,6 +121,7 @@ class MainActivity : AppCompatActivity() {
 
         val newLevel = levelForXp(state.xp)
         if (newLevel > oldLevel) {
+            levelUpOverlay.bringToFront()
             levelUpOverlay.visibility = android.view.View.VISIBLE
             levelUpOverlay.show(newLevel) {
                 levelUpOverlay.visibility = android.view.View.GONE
