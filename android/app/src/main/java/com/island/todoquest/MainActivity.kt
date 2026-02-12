@@ -1,6 +1,8 @@
 package com.island.todoquest
 
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
 import android.view.inputmethod.EditorInfo
 import android.widget.ArrayAdapter
 import android.widget.Button
@@ -9,6 +11,7 @@ import android.widget.ProgressBar
 import android.widget.Spinner
 import android.widget.TextView
 import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -88,6 +91,35 @@ class MainActivity : AppCompatActivity() {
         }
 
         refreshUI()
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.menu_main, menu)
+        return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return when (item.itemId) {
+            R.id.menu_clear_history -> {
+                showClearHistoryDialog()
+                true
+            }
+            else -> super.onOptionsItemSelected(item)
+        }
+    }
+
+    private fun showClearHistoryDialog() {
+        AlertDialog.Builder(this)
+            .setTitle("Clear History")
+            .setMessage("Are you sure you want to clear all completed quests?")
+            .setPositiveButton("Clear") { _: android.content.DialogInterface, _: Int ->
+                state.history.clear()
+                refreshUI()
+                persist()
+                Toast.makeText(this, "History cleared", Toast.LENGTH_SHORT).show()
+            }
+            .setNegativeButton("Cancel", null)
+            .show()
     }
 
     private fun addTask() {
