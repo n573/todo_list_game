@@ -1,0 +1,14 @@
+# Build artifacts
+/build/
+/dist/
+/android/build/
+/android/app/build/
+/android/**/build/
+
+# Android/IDE metadata
+/android/.idea/
+/android/.gradle/
+
+# OS junk
+.DS_Store
+Thumbs.db

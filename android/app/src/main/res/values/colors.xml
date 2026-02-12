@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="sky_top">#9ed8ff</color>
+    <color name="sky_bottom">#6fb7f1</color>
+    <color name="sea_dark">#1f5d9b</color>
+    <color name="sea_light">#2b78c7</color>
+    <color name="island_sand">#f1d48a</color>
+    <color name="island_grass">#5dbb63</color>
+    <color name="panel">#1a2a3a</color>
+    <color name="panel_border">#4e6a7d</color>
+    <color name="text">#e7f6ff</color>
+    <color name="muted">#b8d0e0</color>
+    <color name="accent">#ffcc4d</color>
+    <color name="accent_dark">#c89b2e</color>
+    <color name="palm_trunk">#8b5a2b</color>
+    <color name="palm_leaf">#4fa85b</color>
+</resources>
