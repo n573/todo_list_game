@@ -6,8 +6,8 @@ import android.view.ViewGroup
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.Button
-import android.widget.EditText
 import android.widget.Spinner
+import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.island.todoquest.R
 import com.island.todoquest.data.Task
@@ -16,7 +16,6 @@ class TaskAdapter(
     private val tasks: MutableList<Task>,
     private val onComplete: (Task) -> Unit,
     private val onDelete: (Task) -> Unit,
-    private val onTextChanged: (Task, String) -> Unit,
     private val onWeightChanged: (Task, Int) -> Unit
 ) : RecyclerView.Adapter<TaskAdapter.TaskViewHolder>() {
 
@@ -24,7 +23,7 @@ class TaskAdapter(
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TaskViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.item_task, parent, false)
-        return TaskViewHolder(view, weightOptions, onComplete, onDelete, onTextChanged, onWeightChanged)
+        return TaskViewHolder(view, weightOptions, onComplete, onDelete, onWeightChanged)
     }
 
     override fun onBindViewHolder(holder: TaskViewHolder, position: Int) {
@@ -45,11 +44,10 @@ class TaskAdapter(
         weightOptions: List<String>,
         private val onComplete: (Task) -> Unit,
         private val onDelete: (Task) -> Unit,
-        private val onTextChanged: (Task, String) -> Unit,
         private val onWeightChanged: (Task, Int) -> Unit
     ) : RecyclerView.ViewHolder(itemView) {
 
-        private val taskEdit: EditText = itemView.findViewById(R.id.task_edit)
+        private val taskText: TextView = itemView.findViewById(R.id.task_edit)
         private val weightSpinner: Spinner = itemView.findViewById(R.id.task_weight_spinner)
         private val doneButton: Button = itemView.findViewById(R.id.task_done)
         private val deleteButton: Button = itemView.findViewById(R.id.task_delete)
@@ -82,15 +80,6 @@ class TaskAdapter(
                 }
             }
 
-            taskEdit.setOnFocusChangeListener { _, hasFocus ->
-                if (hasFocus) return@setOnFocusChangeListener
-                val task = boundTask ?: return@setOnFocusChangeListener
-                val updatedText = taskEdit.text.toString().trim()
-                if (updatedText != task.text) {
-                    onTextChanged(task, updatedText)
-                }
-            }
-
             doneButton.setOnClickListener {
                 boundTask?.let(onComplete)
             }
@@ -103,7 +92,7 @@ class TaskAdapter(
         fun bind(task: Task) {
             boundTask = task
             suppressCallbacks = true
-            taskEdit.setText(task.text)
+            taskText.text = task.text
             weightSpinner.setSelection(task.weight - 1, false)
             suppressCallbacks = false
         }

@@ -1,20 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="horizontal"
     android:padding="6dp">
 
-    <EditText
+    <TextView
         android:id="@+id/task_edit"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:imeOptions="actionDone"
-        android:inputType="text"
-        android:maxLines="1"
+        android:gravity="top|start"
         android:textColor="@color/text"
-        android:textColorHint="@color/muted" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/task_weight_spinner"
+        app:layout_constraintBottom_toBottomOf="parent" />
 
     <Spinner
         android:id="@+id/task_weight_spinner"
@@ -22,20 +23,37 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="6dp"
         android:background="@color/panel"
-        android:popupBackground="@color/panel" />
+        android:popupBackground="@color/panel"
+        app:layout_constraintStart_toEndOf="@id/task_edit"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/task_done"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:minWidth="0dp"
+        android:minHeight="0dp"
+        android:paddingHorizontal="8dp"
+        android:paddingVertical="4dp"
+        android:text="✓"
+        android:textSize="12sp"
         android:layout_marginStart="6dp"
-        android:text="Done" />
+        app:layout_constraintStart_toEndOf="@id/task_weight_spinner"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/task_delete"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:minWidth="0dp"
+        android:minHeight="0dp"
+        android:paddingHorizontal="6dp"
+        android:paddingVertical="4dp"
+        android:text="✕"
+        android:textSize="12sp"
         android:layout_marginStart="6dp"
-        android:text="X" />
+        app:layout_constraintStart_toEndOf="@id/task_done"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
-</LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>

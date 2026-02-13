@@ -65,7 +65,6 @@ class MainActivity : AppCompatActivity() {
             state.tasks,
             onComplete = { completeTask(it) },
             onDelete = { deleteTask(it) },
-            onTextChanged = { task, text -> updateTaskText(task, text) },
             onWeightChanged = { task, weight -> updateTaskWeight(task, weight) }
         )
 
@@ -164,11 +163,6 @@ class MainActivity : AppCompatActivity() {
     private fun deleteTask(task: Task) {
         state.tasks.remove(task)
         refreshUI()
-        persist()
-    }
-
-    private fun updateTaskText(task: Task, text: String) {
-        task.text = text
         persist()
     }
 
